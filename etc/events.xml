@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+	 <event name="salesrule_validator_process">
+    	<observer name="validatorobserver" instance="Sapient\Freeproduct\Observer\ValidatorObserver" shared="false" />
+	</event>
+	<event name="sales_quote_collect_totals_before">
+    	<observer name="initiatefreeobserver" instance="Sapient\Freeproduct\Observer\InitiateFreeObserver" shared="false" />
+	</event>
+	<event name="checkout_cart_update_items_before">
+    	<observer name="updatefreeobserver" instance="Sapient\Freeproduct\Observer\UpdateFreeObserver" shared="false" />
+	</event>
+	<!-- events -->
+</config>
